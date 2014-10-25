@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html>
+	<head>
+	</head>
+
+	<body>
+
+	<div id="greeter">
+	</div>
+
+	<!-- jQuery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!-- Flight release -->
+	<script src="http://flightjs.github.io/release/latest/flight.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/requirejs/2.1.14/require.min.js"></script>
+
+	<script>
+		function greeter() {
+			this.after('initialize', function() {
+				console.log('Hello world');
+			});
+		}
+
+		var Greeter = flight.component(greeter);
+
+		Greeter.attachTo('#greeter');
+	</script>
+	</body>
+
+</html>
